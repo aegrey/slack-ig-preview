@@ -1,4 +1,7 @@
-app.message(
+import type { App } from "@slack/bolt";
+
+const register = (app: App) => {
+  app.message(
   /(?:https?:\/\/)?(?:www\.)?instagram\.com\/\S+/i,
   async ({ message, say, logger }) => {
     try {
@@ -15,5 +18,5 @@ app.message(
     } catch (err) {
       logger.error(err);
     }
-  }
-);
+  });
+}
