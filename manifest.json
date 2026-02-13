@@ -22,10 +22,6 @@
       "request_url": "https://<your-domain>/api/slack/events",
       "bot_events": ["app_home_opened", "message.channels"]
     },
-    "interactivity": {
-      "is_enabled": true,
-      "request_url": "https://<your-domain>/api/slack/events"
-    },
     "org_deploy_enabled": true,
     "socket_mode_enabled": false,
     "token_rotation_enabled": false
