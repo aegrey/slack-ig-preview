@@ -1,10 +1,10 @@
-# Slack Webhook for Instagram Previews - Bolt with Hono 
+# Slack Webhook for Instagram Previews - Bolt 
 
 ## Installation
 
 ### Clone and install dependencies
 ```bash
-git clone https://github.com/aegrey/slack-bolt-with-hono.git && cd slack-bolt-with-hono && pnpm install
+git clone https://github.com/aegrey/slack-ig-preview.git && cd slack-ig-preview && pnpm install
 ```
 
 ### Create a Slack App
@@ -51,8 +51,8 @@ git clone https://github.com/aegrey/slack-bolt-with-hono.git && cd slack-bolt-wi
 7. Open your Slack workspace and add your app to any channel
     - _Note_: Make sure you add the production app, not the local app we setup earlier
 9. Your app will now automatically build and deploy whenever you commit to your repo. More information [here](https://vercel.com/docs/git)
-10. Turn the app on for your org and it will listen for links to IG and replacr
-the domain with uuinstagram
+10. Turn the app on and will listen for links to IG and replace
+the domain with uuinstagram to display a preview.
 
 
 ## Project Structure
@@ -67,7 +67,7 @@ This is the Bolt app entry. It initializes `@vercel/slack-bolt`'s `VercelReceive
 
 ### [`src/bolt/listeners`](./src/bolt/listeners)
 
-Every incoming request is routed to a "listener". Inside this directory only one listener is active, [`messages`](./src/bolt/listeners/messages) ssage events
+Every incoming request is routed to a "listener". Inside this directory only one listener is active, [`messages`](./src/bolt/listeners/messages) message events
 
 ### Server: [`src/index.ts`](./src/index.ts)
 
